@@ -1,0 +1,14 @@
+# исправление - использование конкретной версии
+FROM python:3.8-slim-buster
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+# исправление - избавление от избыточных слоев
+RUN pip install --no-cache-dir -r requirements.txt && pip install colorama
+
+COPY . .
+
+# исправление - в соответсвии с документацией рекомендуется использовать ENTRYPOINT
+ENTRYPOINT ["python", "./joke.py"]

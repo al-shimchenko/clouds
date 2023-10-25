@@ -1,0 +1,15 @@
+# плохая практика - использование тега latest
+FROM python:latest
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+# плохая практика - создание избыточных слоев
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install colorama
+
+COPY . .
+
+# плохая практика - в соответсвии с документацией рекомендуется использовать ENTRYPOINT
+CMD ["python", "./joke.py"]
