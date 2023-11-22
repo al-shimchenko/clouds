@@ -48,7 +48,7 @@ requests==2.26.0
 Для работы был создан аккаут в Docker Hub, в нём мы создали тестовый репозиторий, куда в дальнейшем загрузится образ. Добавили секреты в репозиторий на GitHub (Actions repository secrets), которые хранят имя пользователя и пароль от аккаунта Docker Hub. <br/><br/>
 <img src="img/1.png" alt="1.png" width="700"> <br/><br/>
 Также создали файл push.yml внутри раннее созданной директории .github/workflows. В файле записан код с инструкциями для GitHub Actions. <br/><br/>
-<img src="img/2.png" alt="2.png" width="700"> <br/><br/>
+<img src="img/2.png" alt="2.png" width="400"> <br/><br/>
 В этом файле происходят следующие действия:
 
 - При каждом push в ветку main репозитория GitHub запускается рабочий процесс с именем Push image to Docker Hub.
@@ -60,9 +60,9 @@ requests==2.26.0
 
 ## 3. Проверка
 В разделе Actions появился workflow, тесты на GitHub успешно выполнились.<br/><br/>
-<img src="img/4.png" alt="4.png" width="700">  <br/><br/>
+<img src="img/4.png" alt="4.png" width="800">  <br/><br/>
 <img src="img/3.png" alt="3.png" width="700"> <br/><br/>
-Action выполнил все шаги, образ успешно загрузился в репозиторий на Dockerhub.<br/><br/>
+Actions выполнил все шаги, образ успешно загрузился в репозиторий на Dockerhub.<br/><br/>
 <img src="img/5.png" alt="5.png" width="700">  <br/><br/>
 
 Задание выполнено! :tada:
